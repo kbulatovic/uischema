@@ -1,0 +1,13 @@
+{
+    "include": ["src", "test", ".eslintrc.js"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "allowJs": true,
+        "moduleResolution": "nodenext",
+        "target": "ESNext",
+        "allowSyntheticDefaultImports": true,
+        "noEmitOnError": false,
+        "esModuleInterop": true,
+        "baseUrl": "."
+    }
+}
