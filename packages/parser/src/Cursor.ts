@@ -4,4 +4,14 @@ export default class Cursor {
     constructor(pos: number) {
         this.pos = pos;
     }
+
+    left() {
+        --this.pos;
+        return this;
+    }
+
+    right() {
+        ++this.pos;
+        return this;
+    }
 }

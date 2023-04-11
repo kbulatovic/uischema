@@ -1,11 +1,14 @@
 import Tokenizer from './Tokenizer';
-import { type ParserInterface } from './types';
+import { ParserConfig, type ParserInterface } from './types';
 
 export default class Parser implements ParserInterface {
     input: string;
+    indent: number;
+    config: ParserConfig;
 
-    constructor(input: string) {
+    constructor(input: string, config: ParserConfig) {
         this.input = input;
+        this.config = config;
     }
 
     public parse() {

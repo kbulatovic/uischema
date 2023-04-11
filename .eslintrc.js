@@ -15,7 +15,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: 'module',
-        project: ['./tsconfig.json'],
+        project: ['./tsconfig.json', './packages/parser/tsconfig.json'],
         tsconfigRootDir: __dirname,
     },
 
@@ -23,7 +23,7 @@ module.exports = {
         {
             files: ['*.ts'],
             parserOptions: {
-                project: ['./tsconfig.json'],
+                project: ['./tsconfig.json', './packages/parser/tsconfig.json'],
             },
         },
     ],

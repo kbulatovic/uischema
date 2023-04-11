@@ -1,5 +1,7 @@
 export interface ParserInterface {
+    config: ParserConfig;
     input: string;
+    indent: number;
     parse: () => void;
 }
 
@@ -9,7 +11,6 @@ export interface TokenizerInterface {
 
 export type ParserConfig = {
     indent: number;
-    onToken: (token: any) => void;
 };
 
 export interface PositionInterface {
