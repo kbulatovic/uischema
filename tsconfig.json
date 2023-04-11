@@ -1,5 +1,5 @@
 {
-    "include": ["src", "test", ".eslintrc.js"],
+    "include": ["packages/parser/src", "test", "packages/parser/index.ts"],
     "exclude": ["node_modules"],
     "compilerOptions": {
         "allowJs": true,
@@ -8,6 +8,7 @@
         "allowSyntheticDefaultImports": true,
         "noEmitOnError": false,
         "esModuleInterop": true,
-        "baseUrl": "."
+        "baseUrl": ".",
+        "types": ["jest", "node"]
     }
 }
