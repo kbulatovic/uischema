@@ -1,12 +1,12 @@
 Page
-    PageTitle | scope '#/name'
+    PageTitle scope '#/name'
     Tabs
-        Content | path,name 'details'
-            Grid | itemsPerRow [4,1,7], spacing 2
-                Grid | itemsPerRow [7,5], spacingX 8 spacingY 0
+        Content path,name 'details'
+            Grid itemsPerRow [4,1,7], spacing 2
+                Grid itemsPerRow [7,5], spacingX 8 spacingY 0
                     Image | scope '#/image'
                     Grid | itemsPerRow 12, spacingY 4
-                        TextWithLabel '#/platform'
+                        TextWithLabel | scope '#/platform'
                     Grid | itemsPerRow 12
                         Divider | orientation 'horizontal'
                         Subsection | title 'Downloads'
@@ -34,7 +34,7 @@ Page
             SidebarNav
                 Content | name 'Device Configuration', path 'device-config'
                     Subsection | title 'Device Configuration'
-                        Grid | scope { value: '#/pointer', 'enum': '#/modes' }, itemsPerRow 5, spacingX 4
+                        Grid | scope { value '#/pointer', enum '#/modes' } itemsPerRow 5 spacingX 4
                             CardToggle [name, isNullModem] | switchLabel 'Is Null Modem'
                 Content | path 'inputs-outputs', name 'Inputs/Outputs'
                     Subsection | title 'Input Settings'

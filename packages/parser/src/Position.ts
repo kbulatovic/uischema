@@ -11,6 +11,12 @@ export default class Position extends Cursor {
         this.line = line;
     }
 
+    protected moveToNextLine(pos?: number) {
+        ++this.line;
+        this.col = 1;
+        this.pos = pos ?? this.pos + 1;
+    }
+
     offset(n: number) {
         return new Position(this.line, this.col + n);
     }

@@ -10,7 +10,8 @@ export interface TokenizerInterface {
 }
 
 export type ParserConfig = {
-    indent: number;
+    allowLineBreakOnStart?: boolean;
+    indent?: number;
 };
 
 export interface PositionInterface {
